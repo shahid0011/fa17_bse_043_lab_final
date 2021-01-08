@@ -1,15 +1,8 @@
-import 'package:fa17_bse_043_lab_final/splash%20screen.dart';
-import 'package:flutter/material.dart';
-import 'splash screen.dart';
 import 'package:flutter/material.dart';
 import 'package:fa17_bse_043_lab_final/helper/note_provider.dart';
-import 'package:fa17_bse_043_lab_final/screens/note_list_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:fa17_bse_043_lab_final/screens/note_edit_screen.dart';
 import 'package:fa17_bse_043_lab_final/screens/note_view_screen.dart';
-import 'package:flutter/material.dart';
-
-
 
 void main() {
   runApp(MyApp());
@@ -26,7 +19,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         initialRoute: '/',
         routes: {
-          
+
           NoteViewScreen.route: (context) => NoteViewScreen(),
           NoteEditScreen.route: (context) => NoteEditScreen(),
 
