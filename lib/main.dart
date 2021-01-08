@@ -3,6 +3,8 @@ import 'package:fa17_bse_043_lab_final/helper/note_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:fa17_bse_043_lab_final/screens/note_edit_screen.dart';
 import 'package:fa17_bse_043_lab_final/screens/note_view_screen.dart';
+import 'package:fa17_bse_043_lab_final/helper/note_provider.dart';
+
 
 void main() {
   runApp(MyApp());
