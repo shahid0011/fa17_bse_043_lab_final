@@ -1,16 +1,17 @@
 import 'dart:io';
+import 'package:fa17_bse_043_lab_final/helper/note_provider.dart';
+import 'package:fa17_bse_043_lab_final/models/note.dart';
+import 'package:fa17_bse_043_lab_final/units/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_share/flutter_share.dart';
+
 
 import 'package:image_picker/image_picker.dart';
 import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:provider/provider.dart';
-import 'constants.dart';
-import 'delete_popup.dart';
-import 'note.dart';
-import 'note_provider.dart';
-import 'note_view screen.dart';
+
+import 'note_view_screen.dart';
+
 
 class NoteEditScreen extends StatefulWidget {
   static const route = '/edit-note';
@@ -33,7 +34,7 @@ class _NoteEditScreenState extends State {
       id = ModalRoute.of(this.context).settings.arguments;
       if (id != null) {
         selectedNote =
-            Provider.of<NoteProvider>(this.context, listen: false).getNote(id);
+            Provider.of<NoteProvider>(this.context, listen: false).getNotes(id) as Note;
         titleController.text = selectedNote?.title;
         contentController.text = selectedNote?.content;
         if (selectedNote?.imagePath != null) {
