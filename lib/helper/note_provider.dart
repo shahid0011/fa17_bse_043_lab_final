@@ -40,3 +40,8 @@ Future addOrUpdateNote(int id, String title, String content,
     },
   );
 }
+Future deleteNote(int id) {
+  _items.removeWhere((element) => element.id == id);
+  notifyListeners();
+  return DatabaseHelper.delete(id);
+}

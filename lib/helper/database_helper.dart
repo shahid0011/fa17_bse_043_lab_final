@@ -19,3 +19,8 @@ class DatabaseHelper {
   }
 
 }
+
+static Future delete(int id) async {
+final database = await DatabaseHelper.database();
+return database.delete('notes', where: 'id = ?', whereArgs: [id]);
+}
